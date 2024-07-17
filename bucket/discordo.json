@@ -1,0 +1,5 @@
+{
+    "version": "1.0",
+    "url": "https://nightly.link/ayn2op/discordo/workflows/ci/main/discordo_Windows_X64.zip",
+    "bin": "discordo.exe"
+}
