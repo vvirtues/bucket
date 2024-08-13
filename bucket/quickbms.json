@@ -47,6 +47,7 @@
         "$pfx=\"$dir\\\"",
         "$script=\"$bucketsdir\\vvxrtues\\scripts\\quickbms-proxy.ps1\"",
         "Invoke-Expression \"$script $pfx $exe\" | Out-File bin/quickbms.ps1",
+        "Expand-Archive -Path \"$dir\\quickbms_scripts.zip\" -DestinationPath \"$dir\\scripts\"",
         "cd $sp"
     ]
 }
