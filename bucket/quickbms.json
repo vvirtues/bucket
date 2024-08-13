@@ -1,0 +1,13 @@
+{
+    "version": "0.12",
+    "description": "Universal script based files extractor and reimporter",
+    "homepage": "https://aluigi.altervista.org/quickbms.htm",
+    "license": "Unknown",
+    "url": "https://aluigi.altervista.org/papers/quickbms.zip",
+    "bin": [
+        "quickbms.exe",
+        "quickbms_4gb_files.exe"
+    ],
+    
+    "checkver": "\b(\d+(?:\.\d+)*)\b"
+}
