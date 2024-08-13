@@ -42,6 +42,7 @@
         "Get-ChildItem ./xentax_cs -File | ForEach-Object { $tgt=\"./$($_.Name)\"; if (Test-Path $tgt) { $tgt=\"./$($_.BaseName)_xentax$($_.Extension)\"}; Move-Item $_.FullName -Destination $tgt }",
         "Remove-Item xentax_cs",
         "New-Item -ItemType Directory bin",
+        "New-Item -ItemType Directory scripts",
         "$exe=\"$(appdir quickbms)\\current\\bin\\quickbms.exe\"",
         "$pfx=\"$dir\\\"",
         "$script=\"$bucketsdir\\vvxrtues\\scripts\\quickbms-proxy.ps1\"",
