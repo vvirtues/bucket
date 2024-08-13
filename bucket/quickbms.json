@@ -12,7 +12,7 @@
         "1DC4BB68DC330AA8623F673C5B0E326CB330696FF2B90F4719590C1BB5B304BD"
     ],
     "bin": [
-        "quickbms.exe",
+        ## "quickbms.exe",
         "quickbms_4gb_files.exe"
     ],
     "checkver": "QuickBMS generic files extractor and reimporter ([\\d\\.]+)",
