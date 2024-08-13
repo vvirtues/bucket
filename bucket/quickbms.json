@@ -16,9 +16,9 @@
         "quickbms_4gb_files.exe"
     ],
     "checkver": "QuickBMS generic files extractor and reimporter ([\\d\\.]+)",
-    "extract_to": {
-        "quickbms_scripts.zip": "quickbms_scripts"
-    },
+    ## "extract_to": {
+    ##    "quickbms_scripts.zip": "quickbms_scripts"
+    ## },
     "shortcuts": [
         [
             "quickbms.exe",
