@@ -30,24 +30,22 @@
         "B9D4F9EFB55692994CD42A491CFEA11F86E3375A618B9BD771583CE40DDB3828",
         "1DC4BB68DC330AA8623F673C5B0E326CB330696FF2B90F4719590C1BB5B304BD"
     ],
+    "autoupdate": {
+        "url": [
+            "https://aluigi.altervista.org/papers/quickbms.zip",
+            "https://aluigi.altervista.org/bms/quickbms_scripts.zip#/scripts.zip"
+        ]
+    },
     "pre_install": [
         "$sp=(Get-Location).path",
         "cd $dir",
         "Get-ChildItem ./xentax_cs -File | ForEach-Object { $tgt=\"./$($_.Name)\"; if (Test-Path $tgt) { $tgt=\"./$($_.BaseName)_xentax$($_.Extension)\"}; Move-Item $_.FullName -Destination $tgt }",
         "Remove-Item xentax_cs",
         "New-Item -ItemType Directory bin",
-        "$exe64=\"$(appdir quickbms)\\current\\bin\\quickbms.exe\"",
-        "$exe32=\"$(appdir quickbms)\\current\\bin\\quickbms32.exe\"",
+        "$exe=\"$(appdir quickbms)\\current\\bin\\quickbms.exe\"",
         "$pfx=\"$dir\\\"",
-        "$script=\"$bucketsdir\\ifgbucket\\scripts\\quickbms-proxy.ps1\"",
-        "Invoke-Expression \"$script $pfx $exe64\" | Out-File bin/quickbms.ps1",
-        "Invoke-Expression \"$script $pfx $exe32\" | Out-File bin/quickbms32.ps1",
+        "$script=\"$bucketsdir\\vvxrtues\\scripts\\quickbms-proxy.ps1\"",
+        "Invoke-Expression \"$script $pfx $exe\" | Out-File bin/quickbms.ps1",
         "cd $sp"
-    ],
-    "autoupdate": {
-        "url": [
-            "https://aluigi.altervista.org/papers/quickbms.zip",
-            "https://aluigi.altervista.org/bms/quickbms_scripts.zip#/scripts.zip"
-        ]
-    }
+    ]
 }
