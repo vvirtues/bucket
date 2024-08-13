@@ -17,9 +17,8 @@
     ],
     "checkver": "QuickBMS generic files extractor and reimporter ([\\d\\.]+)",
     "extract_to": [
-       "quickbms_scripts.zip": "quickbms_scripts"
+        "quickbms_scripts.zip": "quickbms_scripts"
     ],
-
     "shortcuts": [
         [
             "quickbms.exe",
