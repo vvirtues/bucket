@@ -7,10 +7,19 @@
         "https://aluigi.altervista.org/papers/quickbms.zip",
         "https://aluigi.altervista.org/bms/quickbms_scripts.zip"
     ],
+    "hash": [
+        "B9D4F9EFB55692994CD42A491CFEA11F86E3375A618B9BD771583CE40DDB3828",
+        "1DC4BB68DC330AA8623F673C5B0E326CB330696FF2B90F4719590C1BB5B304BD"
+    ],
     "bin": [
         "quickbms.exe",
         "quickbms_4gb_files.exe"
     ],
+    "extract_dir": "quickbms",
+    "checkver": {
+        "url": "https://aluigi.altervista.org/quickbms.htm",
+        "regex": "QuickBMS generic files extractor and reimporter ([\\d\\.]+)"
+    },
     "shortcuts": [
         [
             "quickbms.exe",
@@ -18,38 +27,11 @@
         ],
         [
             "quickbms_4gb_files.exe",
-            "QuickBMS (4 GB Files)"
+            "QuickBMS (4GB Files)"
         ],
         [
-            "scripts",
+            "quickbms_scripts",
             "QuickBMS Scripts"
         ]
-    ],
-    "checkver": "QuickBMS generic files extractor and reimporter ([\\d\\.]+)",
-    "hash": [
-        "B9D4F9EFB55692994CD42A491CFEA11F86E3375A618B9BD771583CE40DDB3828",
-        "1DC4BB68DC330AA8623F673C5B0E326CB330696FF2B90F4719590C1BB5B304BD"
-    ],
-    "autoupdate": {
-        "url": [
-            "https://aluigi.altervista.org/papers/quickbms.zip",
-            "https://aluigi.altervista.org/bms/quickbms_scripts.zip#/scripts.zip"
-        ]
-    },
-    "extract_to": {
-        "quickbms.zip": ".",
-        "quickbms_scripts.zip": "scripts"
-    },
-    "pre_install": [
-        "$sp = (Get-Location).Path",
-        "cd $dir",
-        "Get-ChildItem -Path \"$dir\\scripts\\xentax_cs\" -File | ForEach-Object { Move-Item $_.FullName -Destination \"$dir\\scripts\\$($_.Name)\" }",
-        "Remove-Item -Path \"$dir\\scripts\\xentax_cs\" -Recurse -Force -ErrorAction SilentlyContinue",
-        "New-Item -ItemType Directory -Path bin -Force",
-        "$exe = \"$dir\\quickbms.exe\"",
-        "$pfx = \"$dir\\\"",
-        "$script = \"$bucketsdir\\vvxrtues\\scripts\\quickbms-proxy.ps1\"",
-        "Invoke-Expression \"$script $pfx $exe\" | Out-File \"$dir\\quickbms.ps1\"",
-        "cd $sp"
     ]
 }
