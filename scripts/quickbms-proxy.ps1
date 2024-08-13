@@ -13,20 +13,20 @@ echo @"
 if (`$_args.Length -gt 0) {
     if (`$_args[0] -eq "list") {
         echo "Contents of `$pfx\\scripts"
-        (Get-ChildItem `$pfx\\scripts -Filter "*.bms").name
+        (Get-ChildItem `$pfx\\scripts -Filter "*.bms").Name
         exit 0
     }
     `$a = `$_args[0];
-    `$b = `$pfx + "scripts\\" + `$a
+    `$b = Join-Path `$pfx "scripts\\$a"
 
-    `$ae = `$(Test-Path `$a)
-    `$be = `$(Test-Path `$b)
+    `$ae = Test-Path `$a
+    `$be = Test-Path `$b
 
     # test script exists
-    if (! `$be) {
-        if (! `$ae) {
-            echo "script `$a not found here or in `$pfx\\scripts";
-            echo "to list all scripts, run: quickbms.ps1 list"
+    if (-not `$be) {
+        if (-not `$ae) {
+            echo "Script `$a not found here or in `$pfx\\scripts";
+            echo "To list all scripts, run: quickbms.ps1 list"
             exit -1;
         } else {
             `$_args[0] = `$a;
