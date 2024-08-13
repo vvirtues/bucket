@@ -36,14 +36,15 @@
             "https://aluigi.altervista.org/bms/quickbms_scripts.zip#/scripts.zip"
         ]
     },
+    "extract_to": {
+        "quickbms_scripts.zip": "scripts"
+    },
     "pre_install": [
         "$sp=(Get-Location).path",
         "cd $dir",
-        "New-Item -ItemType Directory -Path scripts -Force",
-        "Expand-Archive -Path \"$dir\\quickbms_scripts.zip\" -DestinationPath \"$dir\\scripts\"",
-        "Get-ChildItem -Path \"$dir\\xentax_cs\" -File | ForEach-Object { $tgt=\"$dir\\scripts\\$($_.Name)\"; if (Test-Path $tgt) { $tgt=\"$dir\\scripts\\$($_.BaseName)_xentax$($_.Extension)\" }; Move-Item $_.FullName -Destination $tgt }",
-        "Remove-Item xentax_cs",
-        "New-Item -ItemType Directory bin",
+        "Get-ChildItem -Path \"$dir\\scripts\\xentax_cs\" -File | ForEach-Object { $tgt=\"$dir\\scripts\\$($_.Name)\"; if (Test-Path $tgt) { $tgt=\"$dir\\scripts\\$($_.BaseName)_xentax$($_.Extension)\" }; Move-Item $_.FullName -Destination $tgt }",
+        "Remove-Item -Path \"$dir\\scripts\\xentax_cs\" -Recurse -Force",
+        "New-Item -ItemType Directory -Path bin -Force",
         "$exe=\"$(appdir quickbms)\\current\\bin\\quickbms.exe\"",
         "$pfx=\"$dir\\\"",
         "$script=\"$bucketsdir\\vvxrtues\\scripts\\quickbms-proxy.ps1\"",
