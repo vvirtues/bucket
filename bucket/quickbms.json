@@ -2,7 +2,7 @@
     "version": "0.12",
     "description": "Universal script based files extractor and reimporter",
     "homepage": "https://aluigi.altervista.org/quickbms.htm",
-    "license": "Unknown",
+    "license": "GPL-2.0-only",
     "url": "https://aluigi.altervista.org/papers/quickbms.zip",
     "bin": [
         "quickbms.exe",
