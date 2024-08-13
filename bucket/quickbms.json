@@ -15,10 +15,7 @@
         "quickbms.exe",
         "quickbms_4gb_files.exe"
     ],
-    "checkver": {
-        "url": "https://aluigi.altervista.org/quickbms.htm",
-        "regex": "QuickBMS generic files extractor and reimporter ([\\d\\.]+)"
-    },
+    "checkver": "QuickBMS generic files extractor and reimporter ([\\d\\.]+)",
     "extract_to": {
         "quickbms_scripts.zip": "quickbms_scripts"
     },
