@@ -1,9 +1,12 @@
 {
     "version": "0.12",
-    "description": "Universal script based files extractor and reimporter",
+    "description": "Universal script based files extractor and reimporter. Includes premade scripts from homepage",
     "homepage": "https://aluigi.altervista.org/quickbms.htm",
     "license": "GPL-2.0-only",
-    "url": "https://aluigi.altervista.org/papers/quickbms.zip",
+    "url": [
+        "https://aluigi.altervista.org/papers/quickbms.zip",
+        "https://aluigi.altervista.org/bms/quickbms_scripts.zip#/scripts.zip"
+    ],
     "bin": [
         "quickbms.exe",
         "quickbms_4gb_files.exe"
@@ -19,8 +22,14 @@
         ]
     ],
     "checkver": "QuickBMS generic files extractor and reimporter ([\\d\\.]+)",
-    "hash": "B9D4F9EFB55692994CD42A491CFEA11F86E3375A618B9BD771583CE40DDB3828",
+    "hash": [
+        "B9D4F9EFB55692994CD42A491CFEA11F86E3375A618B9BD771583CE40DDB3828",
+        "1DC4BB68DC330AA8623F673C5B0E326CB330696FF2B90F4719590C1BB5B304BD"
+    ],
     "autoupdate": {
-        "url": "https://aluigi.altervista.org/papers/quickbms.zip"
+        "url": [
+            "https://aluigi.altervista.org/papers/quickbms.zip",
+            "https://aluigi.altervista.org/bms/quickbms_scripts.zip",
+        ],
     }
 }
