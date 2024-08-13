@@ -8,6 +8,6 @@
         "quickbms.exe",
         "quickbms_4gb_files.exe"
     ],
-    
-    "checkver": "\b(\d+(?:\.\d+)*)\b"
+    "checkver": "\b(\d+(?:\.\d+)*)\b",
+    "hash": "B9D4F9EFB55692994CD42A491CFEA11F86E3375A618B9BD771583CE40DDB3828"
 }
