@@ -8,16 +8,16 @@
         "https://aluigi.altervista.org/bms/quickbms_scripts.zip"
     ],
     "bin": [
-        "quickbms.exe",
-        "quickbms_4gb_files.exe"
+        "bin\\quickbms.exe",
+        "bin\\quickbms_4gb_files.exe"
     ],
     "shortcuts": [
         [
-            "quickbms.exe",
+            "bin\\quickbms.exe",
             "QuickBMS"
         ],
         [
-            "quickbms_4gb_files.exe",
+            "bin\\quickbms_4gb_files.exe",
             "QuickBMS (4 GB Files)"
         ],
         [
