@@ -29,7 +29,7 @@
     "autoupdate": {
         "url": [
             "https://aluigi.altervista.org/papers/quickbms.zip",
-            "https://aluigi.altervista.org/bms/quickbms_scripts.zip"
-        ],
+            "https://aluigi.altervista.org/bms/quickbms_scripts.zip#/scripts.zip"
+        ]
     }
 }
