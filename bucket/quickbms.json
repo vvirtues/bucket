@@ -23,15 +23,15 @@
     "shortcuts": [
         [
             "quickbms.exe",
-            "QuickBMS"
+            "QuickBMS/QuickBMS"
         ],
         [
             "quickbms_4gb_files.exe",
-            "QuickBMS (4GB Files)"
+            "QuickBMS/QuickBMS (4GB Files)"
         ],
         [
             "scripts",
-            "QuickBMS Scripts"
+            "QuickBMS/QuickBMS Scripts"
         ]
     ]
 }
