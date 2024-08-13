@@ -8,16 +8,16 @@
         "https://aluigi.altervista.org/bms/quickbms_scripts.zip"
     ],
     "bin": [
-        "bin\\quickbms.exe",
-        "bin\\quickbms_4gb_files.exe"
+        "quickbms.exe",
+        "quickbms_4gb_files.exe"
     ],
     "shortcuts": [
         [
-            "bin\\quickbms.exe",
+            "quickbms.exe",
             "QuickBMS"
         ],
         [
-            "bin\\quickbms_4gb_files.exe",
+            "quickbms_4gb_files.exe",
             "QuickBMS (4 GB Files)"
         ],
         [
@@ -37,18 +37,19 @@
         ]
     },
     "extract_to": {
+        "quickbms.zip": ".",
         "quickbms_scripts.zip": "scripts"
     },
     "pre_install": [
-        "$sp=(Get-Location).path",
+        "$sp = (Get-Location).Path",
         "cd $dir",
-        "Get-ChildItem -Path \"$dir\\scripts\\xentax_cs\" -File | ForEach-Object { $tgt=\"$dir\\scripts\\$($_.Name)\"; if (Test-Path $tgt) { $tgt=\"$dir\\scripts\\$($_.BaseName)_xentax$($_.Extension)\" }; Move-Item $_.FullName -Destination $tgt }",
-        "Remove-Item -Path \"$dir\\scripts\\xentax_cs\" -Recurse -Force",
+        "Get-ChildItem -Path \"$dir\\scripts\\xentax_cs\" -File | ForEach-Object { Move-Item $_.FullName -Destination \"$dir\\scripts\\$($_.Name)\" }",
+        "Remove-Item -Path \"$dir\\scripts\\xentax_cs\" -Recurse -Force -ErrorAction SilentlyContinue",
         "New-Item -ItemType Directory -Path bin -Force",
-        "$exe=\"$(appdir quickbms)\\current\\bin\\quickbms.exe\"",
-        "$pfx=\"$dir\\\"",
-        "$script=\"$bucketsdir\\vvxrtues\\scripts\\quickbms-proxy.ps1\"",
-        "Invoke-Expression \"$script $pfx $exe\" | Out-File bin/quickbms.ps1",
+        "$exe = \"$dir\\quickbms.exe\"",
+        "$pfx = \"$dir\\\"",
+        "$script = \"$bucketsdir\\vvxrtues\\scripts\\quickbms-proxy.ps1\"",
+        "Invoke-Expression \"$script $pfx $exe\" | Out-File \"$dir\\quickbms.ps1\"",
         "cd $sp"
     ]
 }
