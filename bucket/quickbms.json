@@ -19,6 +19,10 @@
         [
             "quickbms_4gb_files.exe",
             "QuickBMS (4 GB Files)"
+        ],
+        [
+            "scripts",
+            "QuickBMS Scripts"
         ]
     ],
     "checkver": "QuickBMS generic files extractor and reimporter ([\\d\\.]+)",
