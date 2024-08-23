@@ -2,7 +2,7 @@
     "version":  "1.2.3",
     "license":  "MIT",
     "extract_dir":  "",
-    "url":  "https://github.com/cafali/SnapKey",
+    "url":  "https://github.com/cafali/SnapKey/releases/download/v1.2.3/SnapKey.zip",
     "homepage":  "https://github.com/cafali/SnapKey",
     "hash":  "F854AAE1D0D90C156C9455591F4C9046CC2CFD9E239132B0CD8AC1D748C0C081",
     "bin":  "SnapKey.exe",
